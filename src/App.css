@@ -2,6 +2,36 @@
   text-align: center;
 }
 
+.title {
+  text-align:center;
+}
+
+.grid {
+  display: grid;
+  /* flex-wrap: wrap; */
+  grid-row-gap: 15px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  margin: 0 auto;
+  width:25%;
+}
+
+#on {
+  background-color: red;
+}
+
+#off {
+  background-color:#000
+}
+
+
+
+.round-hole {
+  height: 50px;
+  width: 50px;
+  background-color:#000;
+  border-radius:100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
