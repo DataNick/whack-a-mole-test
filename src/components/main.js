@@ -5,7 +5,7 @@ function Main() {
 
   return (
     <div>
-      <h1 class='title'>Welcome to the Main Page</h1>
+      <h1 className='title'>Welcome to the Main Page</h1>
       <Grid number={15}/>
     </div>
   )
