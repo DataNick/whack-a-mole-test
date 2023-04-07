@@ -23,13 +23,25 @@
   background-color:#000
 }
 
-
+.header {
+  align-items:baseline;
+  display:flex;
+  justify-content:center;
+}
 
 .round-hole {
   height: 50px;
-  width: 50px;
   background-color:#000;
   border-radius:100%;
+  width: 50px;
+}
+
+.score-card {
+  margin-left:10px;
+  background-color: #88f088;
+  padding: 6px;
+  border-radius: 6px;
+
 }
 
 .App-logo {

@@ -1,11 +1,15 @@
 import React from 'react';
 import Grid from '../components/grid';
+import Score from '../components/score';
 
 function Main() {
 
   return (
     <div>
-      <h1 className='title'>Welcome to the Main Page</h1>
+      <div className='header'>
+        <h1 className='title'>Holey Moley</h1>
+        <Score/>
+      </div>
       <Grid number={15}/>
     </div>
   )
