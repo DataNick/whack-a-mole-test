@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import { MainContext } from '../App';
+import { ScoreContext } from '../App';
 
 function Score() {
-  const {score, setScore} = useContext(MainContext);
+  const {score, setScore} = useContext(ScoreContext);
 
   return (
     <div>

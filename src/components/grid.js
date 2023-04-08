@@ -1,6 +1,7 @@
-import React, {useEffect, useState, useCallback} from 'react';
+import React, {createContext, useEffect, useState, useCallback} from 'react';
 import GridItem from './grid_item';
 
+export const StatusContext = createContext()
 
 function Grid({number}) {
   const [status, setStatus] = useState(null);
@@ -17,11 +18,13 @@ function Grid({number}) {
 
 
   return (
-    <div className='grid'>
-    {array.map((e, idx)=> {
-      return <GridItem status={status} index={idx} />
-    })}
-    </div>
+    <StatusContext.Provider value={{status, setStatus}}>
+      <div className='grid'>
+      {array.map((e, idx)=> {
+        return <GridItem status={status} index={idx} />
+      })}
+      </div>
+    </StatusContext.Provider>
   )
 }
 
