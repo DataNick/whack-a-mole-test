@@ -12,7 +12,7 @@ function GridItem({status, index}) {
       let newScore = score + 1
       setScore(newScore);
       // setStatus to off
-      // increment score
+
     }
   }
 
