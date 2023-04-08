@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { MainContext } from '../App';
 
-function GridItem({status, key, index}) {
+function GridItem({status, index}) {
+  const {score, setScore} = useContext(MainContext);
 
   function clickItem(e) {
     let itemStatus =  e.target.getAttribute('id')
     console.log('clicked',e.target.getAttribute('id'))
     if (itemStatus == 'on') {
       console.log('index', index)
+      let newScore = score + 1
+      setScore(newScore);
       // setStatus to off
       // increment score
     }
