@@ -1,3 +1,5 @@
+// This context object exists as a way to scale context objects. Still looking into it.
+
 import React, { useState } from "react";
 
 const Context = React.createContext();

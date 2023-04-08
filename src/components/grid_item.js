@@ -1,8 +1,10 @@
 import React, {useContext} from 'react';
-import { MainContext } from '../App';
+import { ScoreContext } from '../App';
+import { StatusContext } from './grid';
 
-function GridItem({status, index}) {
-  const {score, setScore} = useContext(MainContext);
+function GridItem({index}) {
+  const {score, setScore} = useContext(ScoreContext);
+  const {status, setStatus} = useContext(StatusContext);
 
   function clickItem(e) {
     let itemStatus =  e.target.getAttribute('id')
@@ -11,8 +13,7 @@ function GridItem({status, index}) {
       console.log('index', index)
       let newScore = score + 1
       setScore(newScore);
-      // setStatus to off
-
+      setStatus('off');
     }
   }
 
