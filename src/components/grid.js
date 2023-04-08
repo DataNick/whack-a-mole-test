@@ -12,7 +12,7 @@ function Grid({number}) {
       var item_id = Math.floor(Math.random()*15);
       console.log(item_id)
       setStatus(item_id)
-    }, 1000)
+    }, 500)
     return () => clearTimeout(timeId);
   },[status])
 
@@ -21,7 +21,7 @@ function Grid({number}) {
     <StatusContext.Provider value={{status, setStatus}}>
       <div className='grid'>
       {array.map((e, idx)=> {
-        return <GridItem status={status} index={idx} />
+        return <GridItem index={idx} />
       })}
       </div>
     </StatusContext.Provider>
