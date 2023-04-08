@@ -1,7 +1,8 @@
-import React, {useEffect, useState, useCallback} from 'react';
+import React, {useContext} from 'react';
+import { MainContext } from '../App';
 
 function Score() {
-  const [score, setScore] = useState(0);
+  const {score, setScore} = useContext(MainContext);
 
   return (
     <div>
